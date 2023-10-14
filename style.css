@@ -1,0 +1,100 @@
+:root {
+    --fundo: rgb(34, 34, 34);
+    --fundo2: rgb(73, 73, 73);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* outline: 1px solid red; */
+}
+
+body {
+    background-color: var(--fundo);
+    min-height: 100vh;
+    color: #fff;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--fundo2);
+    border-radius: 25px 25px 0 0;
+    padding: 30px 30px 0 30px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+    &>h1 {
+        color: #999;
+        font-size: 30px;
+        text-align: center;
+    }
+
+}
+
+.container form {
+    background-color: var(--fundo);
+    padding: 10px;
+    border-radius: 5px;
+
+    &>input {
+        background-color: var(--fundo);
+        color: #fff;
+        font-size: 20px;
+        padding: 15px;
+        height: 40px;
+        border: none;
+        outline: none;
+    }
+
+    &>input[type="button"] {
+        background: royalblue;
+        border: none;
+        color: #fff;
+        padding: 4px 10px;
+    }
+
+    &>input[type="button"]:hover {
+        background: #000;
+        cursor: pointer;
+    }
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+::-webkit-progress-bar {
+    background-color: var(--fundo);
+}
+::-webkit-progress-value{
+    transition: 0.5s linear;
+}
+
+
+#idProgressBar.fraca::-webkit-progress-value {
+    background-color: red;
+}
+#idProgressBar.moderada::-webkit-progress-value {
+    background-color: yellow;
+}
+#idProgressBar.forte::-webkit-progress-value {
+    background-color: green;
+}
+
+#idProgressBar {
+    width: 550px;
+    height: 5px;
+    overflow: hidden;
+}
