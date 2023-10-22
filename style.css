@@ -28,9 +28,9 @@ body {
     width: 550px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    gap: 10px;
 
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 
@@ -38,6 +38,11 @@ body {
         color: #999;
         font-size: 30px;
         text-align: center;
+    }
+
+    &>output{
+        align-self: flex-start;
+        padding-left: 50px;
     }
 
 }
@@ -83,14 +88,17 @@ progress {
 }
 
 
-#idProgressBar.fraca::-webkit-progress-value {
+#idProgressBar.fraca::-webkit-progress-value{
     background-color: red;
+    box-shadow: 2px 2px 5px red;
 }
 #idProgressBar.moderada::-webkit-progress-value {
     background-color: yellow;
+    box-shadow: 2px 2px 5px yellow;
 }
 #idProgressBar.forte::-webkit-progress-value {
     background-color: green;
+    box-shadow: 2px 2px 5px green;
 }
 
 #idProgressBar {

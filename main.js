@@ -6,6 +6,7 @@ document.addEventListener("keyup", function (e) {
     let senha = document.querySelector("#idSenha").value;
     let pontosTamanho = funcTamanho(senha);
     let pontosFinal = funcEspeciais(senha, pontosTamanho);
+    let output = document.querySelector("output");
 
     console.log(`Tamanho: ${pontosTamanho} | Especiais: ${pontosFinal}`);
     console.log(`Caracteres: ${senha.length}`);
@@ -16,17 +17,27 @@ document.addEventListener("keyup", function (e) {
         progressBar.classList.remove("forte");
         progressBar.classList.remove("moderada");
         progressBar.classList.add("fraca");
+        output.style.color = "red";
+        output.style.textShadow = "2px 2px 5px red";
+        output.value = "Senha Fraca";
+
     }
     else if (pontosFinal > 5 && pontosFinal < 9) {
         progressBar.classList.remove("fraca");
         progressBar.classList.remove("forte");
         progressBar.classList.add("moderada");
+        output.style.color = "yellow";
+        output.style.textShadow = "2px 2px 5px yellow";
+        output.value = "Senha Moderada";
+
     }
     else if (pontosFinal >= 9) {
         progressBar.classList.remove("moderada");
         progressBar.classList.remove("fraca");
         progressBar.classList.add("forte");
-
+        output.style.color = "green";
+        output.style.textShadow = "2px 2px 5px green";
+        output.value = "Senha Forte";
     }
 });
 
